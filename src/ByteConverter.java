@@ -1,28 +1,28 @@
 
 public class ByteConverter {
 	/** 
-	  *½«32Î»µÄintÖµ·Åµ½4×Ö½ÚµÄÀï 
+	  *çï¿½32æµ£å¶‡æ®‘intéŠå…¼æ–é’ï¿½4ç€›æ¥„å¦­é¨å‹¯å™· 
 	  * @param num 
 	  * @return 
 	  */  
 	public static byte[] int2byteArray(int num, boolean reverse) {  
 	   byte[] result = new byte[4];  
 	   if (reverse){
-		   result[3] = (byte)(num >>> 24);//È¡×î¸ß8Î»·Åµ½0ÏÂ±ê  
-		   result[2] = (byte)(num >>> 16);//È¡´Î¸ß8Îª·Åµ½1ÏÂ±ê  
-		   result[1] = (byte)(num >>> 8); //È¡´ÎµÍ8Î»·Åµ½2ÏÂ±ê  
-		   result[0] = (byte)(num );      //È¡×îµÍ8Î»·Åµ½3ÏÂ±ê  
+		   result[3] = (byte)(num >>> 24);//é™æ ¨æ¸¶æ¥‚ï¿½8æµ£å¶†æ–é’ï¿½0æ¶“å¬«çˆ£  
+		   result[2] = (byte)(num >>> 16);//é™æ ¨ï¿½ï¿ ç®8æ¶“çƒ˜æ–é’ï¿½1æ¶“å¬«çˆ£  
+		   result[1] = (byte)(num >>> 8); //é™æ ¨ï¿½â€²ç¶†8æµ£å¶†æ–é’ï¿½2æ¶“å¬«çˆ£  
+		   result[0] = (byte)(num );      //é™æ ¨æ¸¶æµ£ï¿½8æµ£å¶†æ–é’ï¿½3æ¶“å¬«çˆ£  
 	   }else{
-		   result[0] = (byte)(num >>> 24);//È¡×î¸ß8Î»·Åµ½0ÏÂ±ê  
-		   result[1] = (byte)(num >>> 16);//È¡´Î¸ß8Îª·Åµ½1ÏÂ±ê  
-		   result[2] = (byte)(num >>> 8); //È¡´ÎµÍ8Î»·Åµ½2ÏÂ±ê  
-		   result[3] = (byte)(num );      //È¡×îµÍ8Î»·Åµ½3ÏÂ±ê   
+		   result[0] = (byte)(num >>> 24);//é™æ ¨æ¸¶æ¥‚ï¿½8æµ£å¶†æ–é’ï¿½0æ¶“å¬«çˆ£  
+		   result[1] = (byte)(num >>> 16);//é™æ ¨ï¿½ï¿ ç®8æ¶“çƒ˜æ–é’ï¿½1æ¶“å¬«çˆ£  
+		   result[2] = (byte)(num >>> 8); //é™æ ¨ï¿½â€²ç¶†8æµ£å¶†æ–é’ï¿½2æ¶“å¬«çˆ£  
+		   result[3] = (byte)(num );      //é™æ ¨æ¸¶æµ£ï¿½8æµ£å¶†æ–é’ï¿½3æ¶“å¬«çˆ£   
 	   }
 	   return result;  
 	}  
 	  
 	/** 
-	  * ½«4×Ö½ÚµÄbyteÊı×é×ª³ÉÒ»¸öintÖµ 
+	  * çï¿½4ç€›æ¥„å¦­é¨åˆ¡yteéæ‰®ç²æï¿½é´æ„ªç«´æ¶“çŒ§ntéŠï¿½ 
 	  * @param b 
 	  * @return 
 	  */  
@@ -30,21 +30,21 @@ public class ByteConverter {
 	    byte[] a = new byte[4];  
 	    int i = a.length - 1, j;  
 	    if (reverse){
-	    	for (j = 0; i >= 0; --i, ++j) {//´ÓbµÄÎ²²¿(¼´intÖµµÄµÍÎ»)¿ªÊ¼copyÊı¾İ  
+	    	for (j = 0; i >= 0; --i, ++j) {//æµ å·„é¨å‹«ç†¬é–®ï¿½(é—ç ³ntéŠè‚©æ®‘æµ£åºç¶…)å¯®â‚¬æ¿®åªopyéç‰ˆåµ  
 		        if(j < 4)  
 		            a[i] = b[j];  
 		        else  
-		            a[i] = 0;//Èç¹ûb.length²»×ã4,Ôò½«¸ßÎ»²¹0
+		            a[i] = 0;//æ¿¡å‚›ç‰b.lengthæ¶“å¶ˆå†»4,é’æ¬çš¢æ¥‚æ¨¹ç¶…ç›ï¿½0
 	    	}
 	    }else{
-		    for (j = b.length - 1; i >= 0; i--,j--) {//´ÓbµÄÎ²²¿(¼´intÖµµÄµÍÎ»)¿ªÊ¼copyÊı¾İ  
+		    for (j = b.length - 1; i >= 0; i--,j--) {//æµ å·„é¨å‹«ç†¬é–®ï¿½(é—ç ³ntéŠè‚©æ®‘æµ£åºç¶…)å¯®â‚¬æ¿®åªopyéç‰ˆåµ  
 		        if(j >= 0)  
 		            a[i] = b[j];  
 		        else  
-		            a[i] = 0;//Èç¹ûb.length²»×ã4,Ôò½«¸ßÎ»²¹0
+		            a[i] = 0;//æ¿¡å‚›ç‰b.lengthæ¶“å¶ˆå†»4,é’æ¬çš¢æ¥‚æ¨¹ç¶…ç›ï¿½0
 		    }
 	    }  
-	    int v0 = (a[0] & 0xff) << 24;//&0xff½«byteÖµÎŞ²îÒì×ª³Éint,±ÜÃâJava×Ô¶¯ÀàĞÍÌáÉıºó,»á±£Áô¸ßÎ»µÄ·ûºÅÎ»  
+	    int v0 = (a[0] & 0xff) << 24;//&0xffçå“¹yteéŠå…¼æ£¤å®¸ï¿½å¯®å‚æµ†é´æ‘nt,é–¬å®å¤Javaé‘·ï¿½é”ã„§è¢«é¨å¬«å½é—å›§æ‚—,æµ¼æ°«ç¹šé£æ¬“ç®æµ£å¶‡æ®‘ç»—ï¹€å½¿æµ£ï¿½  
 	    int v1 = (a[1] & 0xff) << 16;  
 	    int v2 = (a[2] & 0xff) << 8;  
 	    int v3 = (a[3] & 0xff) ;  
@@ -52,10 +52,10 @@ public class ByteConverter {
 	}  
 	  
 	/** 
-	  * ×ª»»shortÎªbyte 
+	  * æï¿½é¹ï¿½shortæ¶“ç¯µyte 
 	  * 
 	  * @param b 
-	  * @param s ĞèÒª×ª»»µÄshort 
+	  * @param s é—‡â‚¬ç‘•ä½½æµ†é¹ãˆ¢æ®‘short 
 	  * @param index 
 	  */  
 	public static void putShort(byte b[], short s, int index) {  
@@ -64,10 +64,10 @@ public class ByteConverter {
 	}  
 	  
 	/** 
-	  * Í¨¹ıbyteÊı×éÈ¡µ½short 
+	  * é–«æ°³ç¹ƒbyteéæ‰®ç²é™æ §åŸŒshort 
 	  * 
 	  * @param b 
-	  * @param index µÚ¼¸Î»¿ªÊ¼È¡ 
+	  * @param index ç»—ï¿½é‘çŠ±ç¶…å¯®â‚¬æ¿®å¬ªå½‡ 
 	  * @return 
 	  */  
 	public static short getShort(byte[] b, int index) {  
@@ -75,7 +75,7 @@ public class ByteConverter {
 	}  
 	  
 	/** 
-	  * ×Ö·ûµ½×Ö½Ú×ª»» 
+	  * ç€›æ¥ƒï¿½ï¹€åŸŒç€›æ¥„å¦­æï¿½é¹ï¿½ 
 	  * 
 	  * @param ch 
 	  * @return 
@@ -84,14 +84,14 @@ public class ByteConverter {
 	        int temp = (int) ch;  
 	        // byte[] b = new byte[2];  
 	        for (int i = 0; i < 2; i ++ ) {  
-	             // ½«×î¸ßÎ»±£´æÔÚ×îµÍÎ»  
+	             // çå—˜æ¸¶æ¥‚æ¨¹ç¶…æ·‡æ¿†ç“¨é¦ã„¦æ¸¶æµ£åºç¶…  
 	            bb[index + i] = new Integer(temp & 0xff).byteValue();  
-	            temp = temp >> 8; // ÏòÓÒÒÆ8Î»  
+	            temp = temp >> 8; // éšæˆå½¸ç»‰ï¿½8æµ£ï¿½  
 	        }  
 	}  
 	  
 	/** 
-	  * ×Ö½Úµ½×Ö·û×ª»» 
+	  * ç€›æ¥„å¦­é’æ¿ç“§ç»—ï¹æµ†é¹ï¿½ 
 	  * 
 	  * @param b 
 	  * @return 
@@ -112,7 +112,7 @@ public class ByteConverter {
 	}  
 	  
 	/** 
-	  * float×ª»»byte 
+	  * floatæï¿½é¹ï¿½byte 
 	  * 
 	  * @param bb 
 	  * @param x 
@@ -128,7 +128,7 @@ public class ByteConverter {
 	}  
 	  
 	/** 
-	  * Í¨¹ıbyteÊı×éÈ¡µÃfloat 
+	  * é–«æ°³ç¹ƒbyteéæ‰®ç²é™æ §ç·±float 
 	  * 
 	  * @param bb 
 	  * @param index 
@@ -147,7 +147,7 @@ public class ByteConverter {
 	}  
 	  
 	/** 
-	  * double×ª»»byte 
+	  * doubleæï¿½é¹ï¿½byte 
 	  * 
 	  * @param bb 
 	  * @param x 
@@ -163,7 +163,7 @@ public class ByteConverter {
 	}  
 	  
 	/** 
-	  * Í¨¹ıbyteÊı×éÈ¡µÃfloat 
+	  * é–«æ°³ç¹ƒbyteéæ‰®ç²é™æ §ç·±float 
 	  * 
 	  * @param bb 
 	  * @param index 

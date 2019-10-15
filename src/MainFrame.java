@@ -36,46 +36,46 @@ public class MainFrame extends JFrame{
 		chooser1 = new JFileChooser((String)Imagenario.settings.get("open_dict"));
 		this.add(chooser1);
 		chooser1.setFileFilter(new javax.swing.filechooser.FileFilter() {
-		      public boolean accept(File f) { //设定可用的文件的后缀名
+		      public boolean accept(File f) { //鑴＄尗闇茬瘬椹磋劇鑴剻纰岃剾鑴﹁剾褰曢晛纰岃剾娼炶锤鑴虫綖鑴欐病
 		    	  return f.getName().endsWith(".bmp") || f.getName().endsWith(".jpg") ||
 		        		  f.getName().endsWith(".jpeg") || f.getName().endsWith(".gif") ||
 		        		  f.getName().endsWith(".png") ||f.isDirectory();
 		        }
 		        public String getDescription() {
-		          return "图片文件(*.bmp, *.jpg, *.jpeg, *.gif, *.png)";
+		          return "鑴ュ綍鑴濆崲鑴﹁剾褰曢晛(*.bmp, *.jpg, *.jpeg, *.gif, *.png)";
 		        }
 		      });
 		
 		chooser2 = new JFileChooser((String)Imagenario.settings.get("save_dict"));
 		this.add(chooser2);
 		chooser2.setFileFilter(new javax.swing.filechooser.FileFilter() {
-		      public boolean accept(File f) { //设定可用的文件的后缀名
+		      public boolean accept(File f) { //鑴＄尗闇茬瘬椹磋劇鑴剻纰岃剾鑴﹁剾褰曢晛纰岃剾娼炶锤鑴虫綖鑴欐病
 		          return f.getName().endsWith(".scx") || f.isDirectory();
 		        }
 		        public String getDescription() {
-		          return "剧情文件(*.scx)";
+		          return "鎴幗鑴熻寘鑴﹁剾褰曢晛(*.scx)";
 		        }
 		      });
 		
-		button_open = new JButton("打开图像...");
+		button_open = new JButton("楹撹矊椹撮檵鑴ュ綍鑴у附...");
 		button_open.setSize(120, 40);
 		button_open.setLocation(320, 20);
 		
-		button_open2 = new JButton("打开高度图...");
+		button_open2 = new JButton("楹撹矊椹撮檵璧傝劷闇茶劆鑴ュ綍...");
 		button_open2.setSize(120, 40);
 		button_open2.setLocation(320, 70);
 		
-		button_process = new JButton("开始生成");
+		button_process = new JButton("椹撮檵鑴㈠綍鑴＄叅椴佽劇");
 		button_process.setSize(120, 40);
 		button_process.setLocation(320, 120);
 		
-		button_save = new JButton("保存剧情");
+		button_save = new JButton("鍗ゆ嫝楹撳繖鎴幗鑴熻寘");
 		button_save.setSize(120, 40);
 		button_save.setLocation(320, 170);
 		
-		button_setting = buttonSet("生成设置", 120, 40, 320, 220);
+		button_setting = buttonSet("鑴＄叅椴佽劇鑴＄尗鑴拌剻", 120, 40, 320, 220);
 		
-		button_about = new JButton("关于...");
+		button_about = new JButton("楣胯劥鑴劮...");
 		button_about.setSize(120, 40);
 		button_about.setLocation(320, 270);
 		
@@ -101,19 +101,19 @@ public class MainFrame extends JFrame{
 		
 		this.add(canvas);
 		
-		buttons_control[0] = new JButton("原图像");
+		buttons_control[0] = new JButton("鑴鑴ュ綍鑴у附");
 		buttons_control[0].setSize(128, 25);
 		buttons_control[0].setLocation(0, 256);
 		
-		buttons_control[1] = new JButton("地图");
+		buttons_control[1] = new JButton("纰岃劥鑴ュ綍");
 		buttons_control[1].setSize(128, 25);
 		buttons_control[1].setLocation(128, 256);
 		
-		buttons_control[2] = new JButton("高度图像");
+		buttons_control[2] = new JButton("璧傝劷闇茶劆鑴ュ綍鑴у附");
 		buttons_control[2].setSize(128, 25);
 		buttons_control[2].setLocation(0, 281);
 		
-		buttons_control[3] = new JButton("高度地图");
+		buttons_control[3] = new JButton("璧傝劷闇茶劆纰岃劥鑴ュ綍");
 		buttons_control[3].setSize(128, 25);
 		buttons_control[3].setLocation(128, 281);
 		
@@ -122,9 +122,9 @@ public class MainFrame extends JFrame{
 		this.add(buttons_control[2]);
 		this.add(buttons_control[3]);
 		
-		buttons_control[4]=buttonSet("左转", 85, 25, 0, 306);
-		buttons_control[6]=buttonSet("右转", 85, 25, 171, 306);
-		buttons_control[5]=buttonSet("转置", 86, 25, 85, 306);
+		buttons_control[4]=buttonSet("鑴宠锤鑴抽檵", 85, 25, 0, 306);
+		buttons_control[6]=buttonSet("鑴劒鑴抽檵", 85, 25, 171, 306);
+		buttons_control[5]=buttonSet("鑴抽檵鑴拌剻", 86, 25, 85, 306);
 		
 		// To prevent compoments from enlarge
 		add(nullbutton);

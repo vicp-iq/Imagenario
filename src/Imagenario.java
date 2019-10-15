@@ -77,7 +77,7 @@ public class Imagenario {
 				
 				if ((srcfile = mainframe.chooser1.getSelectedFile())!=null){
 					if (!srcfile.exists()){
-						JOptionPane.showMessageDialog(mainframe,"ÎÄ¼şÎŞĞ§£¡");
+						JOptionPane.showMessageDialog(mainframe,"æ–‡ä»¶æ— æ•ˆï¼");
 						return;
 					}
 					try {
@@ -85,17 +85,17 @@ public class Imagenario {
 						settings.put("open_dict", srcfile.getPath());
 						BufferedImage img = ImageIO.read(srcfile);
 						if (img == null){
-							JOptionPane.showMessageDialog(mainframe,"Õâ²»ÊÇÓĞĞ§µÄÍ¼ÏñÎÄ¼ş£¡");
+							JOptionPane.showMessageDialog(mainframe,"è¿™ä¸æ˜¯æœ‰æ•ˆçš„å›¾åƒæ–‡ä»¶ï¼");
 							return;
 						}
 						mainframe.setImage(img);
 						srcimg = img;
 						
-						if (srcimg2 != null && JOptionPane.showConfirmDialog(mainframe, "ÄúÒªÆúÖÃ¸ß¶ÈÍ¼Âğ£¿") == 0)
+						if (srcimg2 != null && JOptionPane.showConfirmDialog(mainframe, "æ‚¨è¦å¼ƒç½®é«˜åº¦å›¾å—ï¼Ÿ") == 0)
 							srcimg2 = null;
 						
 					} catch (IOException e1) {
-						JOptionPane.showMessageDialog(mainframe,"Õâ²»ÊÇÓĞĞ§µÄÍ¼ÏñÎÄ¼ş£¡");
+						JOptionPane.showMessageDialog(mainframe,"è¿™ä¸æ˜¯æœ‰æ•ˆçš„å›¾åƒæ–‡ä»¶ï¼");
 						e1.printStackTrace();
 					}
 				}
@@ -108,7 +108,7 @@ public class Imagenario {
 					return;
 				if ((srcfile2 = mainframe.chooser1.getSelectedFile())!=null){
 					if (!srcfile2.exists()){
-						JOptionPane.showMessageDialog(mainframe,"ÎÄ¼şÎŞĞ§£¡");
+						JOptionPane.showMessageDialog(mainframe,"æ–‡ä»¶æ— æ•ˆï¼");
 						return;
 					}
 					try {
@@ -116,14 +116,14 @@ public class Imagenario {
 						settings.put("open_dict", srcfile2.getPath());
 						BufferedImage img = ImageIO.read(srcfile2);
 						if (img == null){
-							JOptionPane.showMessageDialog(mainframe,"Õâ²»ÊÇÓĞĞ§µÄÍ¼ÏñÎÄ¼ş£¡");
+							JOptionPane.showMessageDialog(mainframe,"è¿™ä¸æ˜¯æœ‰æ•ˆçš„å›¾åƒæ–‡ä»¶ï¼");
 							return;
 						}
 						mainframe.setImage(img);
 						srcimg2 = img;
 						
 					} catch (IOException e1) {
-						JOptionPane.showMessageDialog(mainframe,"Õâ²»ÊÇÓĞĞ§µÄÍ¼ÏñÎÄ¼ş£¡");
+						JOptionPane.showMessageDialog(mainframe,"è¿™ä¸æ˜¯æœ‰æ•ˆçš„å›¾åƒæ–‡ä»¶ï¼");
 						e1.printStackTrace();
 					}
 				}
@@ -135,7 +135,7 @@ public class Imagenario {
 				try{
 					scx = SCXManager.load(RAW);
 				}catch (FileNotFoundException exception){
-					JOptionPane.showMessageDialog(mainframe,"ÎŞ·¨´ò¿ª"+RAW+"ÎÄ¼ş£¬Òò´ËÎŞ·¨Éú³É¡£");
+					JOptionPane.showMessageDialog(mainframe,"æ— æ³•æ‰“å¼€"+RAW+"æ–‡ä»¶ï¼Œå› æ­¤æ— æ³•ç”Ÿæˆã€‚");
 					return;
 				}
 				
@@ -171,7 +171,7 @@ public class Imagenario {
 		mainframe.button_save.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e){
 				if (scx == null){
-					JOptionPane.showMessageDialog(mainframe,"ÉĞÎ´Éú³ÉµØÍ¼£¡");
+					JOptionPane.showMessageDialog(mainframe,"å°šæœªç”Ÿæˆåœ°å›¾ï¼");
 					return;
 				}
 				mainframe.chooser2.showSaveDialog(mainframe);
@@ -261,7 +261,7 @@ public class Imagenario {
 		
 		mainframe.button_about.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e){
-				JOptionPane.showMessageDialog(mainframe, "Imagenario v"+VERSION+"\nÕâÊÇÒ»¸ö¼òµ¥¶øÊµÓÃµÄ¹¤¾ß£¬ÄãÖ»ÒªÑ¡ÔñÍ¼Æ¬£¬¾Í¿ÉÒÔ°´ÕÕËüµÄÑÕÉ«£¬Éú³ÉÏàËÆµÄµØÍ¼£¡\nBy ÎÒÊÇË­004(WAIFor)");
+				JOptionPane.showMessageDialog(mainframe, "Imagenario v"+VERSION+"\nè¿™æ˜¯ä¸€ä¸ªç®€å•è€Œå®ç”¨çš„å·¥å…·ï¼Œä½ åªè¦é€‰æ‹©å›¾ç‰‡ï¼Œå°±å¯ä»¥æŒ‰ç…§å®ƒçš„é¢œè‰²ï¼Œç”Ÿæˆç›¸ä¼¼çš„åœ°å›¾ï¼\nBy æˆ‘æ˜¯è°004(WAIFor)");
 			}
 		});
 		

@@ -30,31 +30,31 @@ public class SettingDialog extends JDialog {
 		this.setSize(400, 400);
 		this.setResizable(false);
 		
-		addLabel("µØÍ¼³ß´ç", 100, 24, 20, 20);
+		addLabel("åœ°å›¾å°ºå¯¸", 100, 24, 20, 20);
 		mode = new ButtonGroup();
 		radio_mode = new JRadioButton[2];
-		radio_mode[0] = addRadio("²Ã¼ô", 80, 24, 150, 20);
-		radio_mode[1] = addRadio("ÑÓÉì", 80, 24, 250, 20);
+		radio_mode[0] = addRadio("è£å‰ª", 80, 24, 150, 20);
+		radio_mode[1] = addRadio("å»¶ä¼¸", 80, 24, 250, 20);
 		mode.add(radio_mode[0]);
 		mode.add(radio_mode[1]);
 		
-		addLabel("Éú³ÉÖ²Îï", 100, 24, 20, 90);
+		addLabel("ç”Ÿæˆæ¤ç‰©", 100, 24, 20, 90);
 		plants = new ButtonGroup();
 		radio_plants = new JRadioButton[2];
-		radio_plants[0] = addRadio("²»Éú³É", 80, 24, 150, 90);
-		radio_plants[1] = addRadio("Éú³É", 80, 24, 250, 90);
+		radio_plants[0] = addRadio("ä¸ç”Ÿæˆ", 80, 24, 150, 90);
+		radio_plants[1] = addRadio("ç”Ÿæˆ", 80, 24, 250, 90);
 		plants.add(radio_plants[0]);
 		plants.add(radio_plants[1]);
 		
-		addLabel("Éú³Éµ÷É«°å", 100, 24, 20, 160);
+		addLabel("ç”Ÿæˆè°ƒè‰²æ¿", 100, 24, 20, 160);
 		palette = new ButtonGroup();
 		radio_palette = new JRadioButton[3];
-		radio_palette[0] = addRadio("ÒÕÊõ", 80, 24, 150, 160);
-		radio_palette[1] = addRadio("ÊµÓÃ", 80, 24, 250, 160);
+		radio_palette[0] = addRadio("è‰ºæœ¯", 80, 24, 150, 160);
+		radio_palette[1] = addRadio("å®ç”¨", 80, 24, 250, 160);
 		palette.add(radio_palette[0]);
 		palette.add(radio_palette[1]);
 		
-		addLabel("º£°ÎµÈ¼¶", 100, 24, 20, 230);
+		addLabel("æµ·æ‹”ç­‰çº§", 100, 24, 20, 230);
 		max_height = addTextField(100, 24, 150, 230);
 		
 

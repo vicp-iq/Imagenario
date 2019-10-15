@@ -114,7 +114,7 @@ public class SCX {
 }
 @SuppressWarnings("serial")
 class StreamEndException extends Exception{
-	public StreamEndException() {  //父类方法
+	public StreamEndException() {  //鐖剁被鏂规硶
 		super();
 	}
 }
