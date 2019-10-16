@@ -13,6 +13,11 @@ public class ImageProcessor {
 	static final int PLANTS_NO = 0;
 	static final int PLANTS_YES = 1;
 	
+	static void setTerrainSizeByImage(Terrain terr, BufferedImage img)
+	{
+		setTerrainSizeByImage(terr, img, 1);
+	}
+
 	static void setTerrainSizeByImage(Terrain terr, BufferedImage img, int mode){
 		int size;
 		if (mode == 0){
